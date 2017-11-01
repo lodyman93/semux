@@ -12,7 +12,7 @@ fi
 version=$(java -version 2>&1 | egrep -o '[1-2].[6-9]' )
 min=$(1.8)
 
-    if [ "$version" =< "$min" ]; then
+    if [ "$version" -lt "$min" ]; then
         echo "Error: Java 8 or above is required"
     exit 1
 fi
