@@ -348,6 +348,8 @@ public class DelegatesPanel extends JPanel implements ActionListener {
                 JOptionPane.showMessageDialog(this, MessagesUtil.get("SelectDelegate"));
             } else if (value == 0L) {
                 JOptionPane.showMessageDialog(this, MessagesUtil.get("VotesGreaterThanZero"));
+            } else if (value < 0) {
+                JOptionPane.showMessageDialog(this, MessagesUtil.get("EnterValidAmount"));
             } else {
                 Kernel kernel = Kernel.getInstance();
                 PendingManager pendingMgr = kernel.getPendingManager();
